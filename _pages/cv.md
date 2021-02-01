@@ -18,7 +18,7 @@ Education
 
 Work experience
 ======
-* 2017 -- now: Research Assistant
+* 2017 -- ... : Research Assistant
   * MPI for Dynamics and Self-organization
   * Viola Priesemann Group
 
