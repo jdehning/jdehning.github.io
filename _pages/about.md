@@ -23,7 +23,7 @@ with data, propagating uncertainty through the full analysis, and comparing comp
 These strengths matter most when we cannot fully control a system experimentally, 
 when data are limited, and when uncertainty itself is an essential part of the result. 
 
-During the COVID-19 pandemic we and other groups used such  
+During the COVID-19 pandemic we and other groups used such 
 Bayesian approaches to quantify uncertainty in key epidemiological
 quantities and to infer changes in spreading dynamics under interventions, precisely
 because the system is high-dimensional, partially observed, and only indirectly controllable.
