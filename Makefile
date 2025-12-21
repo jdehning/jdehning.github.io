@@ -17,8 +17,8 @@ bundle-install: bundle-config ## Install gems via Bundler
 serve: ## Run local dev server at http://127.0.0.1:4000
 	@bundle exec jekyll serve
 
-build: ## Build the site into ./_site
-	@bundle exec jekyll build
+build: ## Build the site into ./_site (GitHub Pages stack)
+	@bundle exec github-pages build --source . --destination ./_site
 
 doctor: ## Run Jekyll diagnostics
 	@bundle exec jekyll doctor

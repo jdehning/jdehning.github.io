@@ -5,3 +5,4 @@ vendor/
 .jekyll-cache/
 .jekyll-metadata
 .idea/
+Gemfile.lock
