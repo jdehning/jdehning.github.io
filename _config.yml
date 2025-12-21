@@ -7,9 +7,9 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Jonas Dehning"
+title                    : "Dr. Jonas Dehning"
 title_separator          : "-"
-name                     : &name "Jonas Dehning"
+name                     : &name "Dr. Jonas Dehning"
 description              : &description "personal description"
 url                      : https://www.jdehning.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -80,7 +80,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Jonas Dehning"
+  name             : "Dr. Jonas Dehning"
   avatar           : "bio-photo.jpg"
   bio              : "Neuroscience, COVID-19 research, Bayesian inference"
   location         : "Göttingen, Germany"
