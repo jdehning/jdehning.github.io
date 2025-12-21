@@ -8,6 +8,8 @@ redirect_from:
   - /about.html
 ---
 
+<div class="text-justify" markdown="1">
+
 ## Research interests
 
 The human brain continuously integrates uncertain information to arrive at a course of action and to form new understanding. 
@@ -32,3 +34,4 @@ and by exploiting curvature information to adapt metrics and step sizes in chall
 I also integrate modern automatic-differentiation and deep-learning tools to enable 
 richer models of dynamical processes.
 
+</div>

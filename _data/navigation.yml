@@ -1,4 +1,6 @@
 # main links links
 main:
+  - title: "Open Source"
+    url: /open-source/
   - title: "CV"
     url: /cv/

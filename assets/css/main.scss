@@ -39,3 +39,22 @@
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
+
+.text-justify {
+  p {
+    text-align: justify;
+    text-align-last: left;
+    hyphens: none;
+  }
+}
+
+@media (max-width: 48em) {
+  .text-justify {
+    p {
+      hyphens: auto;
+      hyphenate-limit-chars: 10 4 4;
+      hyphenate-limit-lines: 2;
+      hyphenate-limit-zone: 8%;
+    }
+  }
+}
