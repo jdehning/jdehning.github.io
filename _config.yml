@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Dr. Jonas Dehning"
-  avatar           : "bio-photo.jpg"
+  avatar           : "bio_photo_bw.jpg"
   bio              : "Neuroscience, COVID-19 research, Bayesian inference"
   location         : "Göttingen, Germany"
   employer         :
