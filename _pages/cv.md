@@ -29,5 +29,7 @@ redirect_from:
 - **Dehning, J.**, Mohr, S. B., Contreras, S., …, Priesemann, V. “Impact of the Euro 2020 championship on the spread of COVID-19”. *Nature Communications* (2023). doi: [10.1038/s41467-022-35512-x](https://doi.org/10.1038/s41467-022-35512-x)
 - Lewen, D., Ivanov, V., **Dehning, J.**, …, Kagan, I. “Continuous dynamics of cooperation and competition in social decision-making”. *Communications Psychology* (2025). doi: [10.1038/s44271-025-00348-w](https://doi.org/10.1038/s44271-025-00348-w)
 
+Full list on [Google Scholar]({{ site.author.googlescholar }}).
+
 ## Languages
 - German (native), French (C2), English (C1), Spanish (A2)

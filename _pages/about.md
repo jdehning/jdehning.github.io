@@ -10,7 +10,11 @@ redirect_from:
 
 ## Research interests
 
-I was always fascinated by the complexity of the human brain: how little we understand about the mechanisms that allow us highly abstract thoughts about our environment. Likewise, which of the numerous biological processes are necessary to reach this functionality?
+
+
+I was always fascinated by the complexity of the human brain: 
+how little we understand about the mechanisms that allow us highly abstract thoughts about our environment. 
+Likewise, which of the numerous biological processes are necessary to reach this functionality?
 
 To gain a better understanding about the potential mechanisms, my goal is  to research how well biological neural networks can be approximated by recurrent networks or branching processes. How much insight about  neural dynamics and their functional motivation can be gained by using simple or also more involved models?
 
