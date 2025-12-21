@@ -11,6 +11,10 @@ source "https://rubygems.org"
 
 gem "github-pages", group: :jekyll_plugins
 
+# Required for building older dependencies (e.g. nokogiri/mini_portile2) on
+# newer Ruby versions where net/ftp is no longer shipped as a stdlib file.
+gem "net-ftp", require: false
+
 # If you want to use Jekyll native, uncomment the line below.
 # To upgrade, run `bundle update`.
 

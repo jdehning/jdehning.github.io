@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="favicon.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs12" />
+  <sodipodi:namedview
+     id="namedview10"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="3.9609915"
+     inkscape:cx="106.03406"
+     inkscape:cy="57.435115"
+     inkscape:window-width="1920"
+     inkscape:window-height="1022"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg8" />
+  <title
+     id="title2">JD favicon</title>
+  <circle
+     cx="64"
+     cy="64"
+     r="60"
+     fill="#111827"
+     id="circle4" />
+  <text
+     x="76.293877"
+     y="59.206806"
+     text-anchor="middle"
+     dominant-baseline="middle"
+     font-family="ui-sans-serif, system-ui, '-apple-system', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+     font-size="77.6043px"
+     font-weight="700"
+     letter-spacing="-2"
+     fill="#ffffff"
+     id="text6"
+     transform="scale(0.87906911,1.137567)"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Go Medium';-inkscape-font-specification:'Go Medium,  Bold';stroke-width:1.38578">JD</text>
+</svg>
