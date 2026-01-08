@@ -3,9 +3,10 @@ set -euo pipefail
 
 ROOT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
 
-INPUT_PHOTO="${ROOT_DIR}/images/bio_photo_bw.jpg"
+INPUT_PHOTO="${ROOT_DIR}/_source_images/bio_photo_bw.jpg"
 INPUT_LOGO="${ROOT_DIR}/images/favicon.png"
-OUTPUT_OG_IMAGE="${ROOT_DIR}/images/og-image.png"
+OUTPUT_OG_IMAGE_PNG="${ROOT_DIR}/images/og-image.png"
+OUTPUT_OG_IMAGE_JPG="${ROOT_DIR}/images/og-image.jpg"
 
 MAGICK_BIN="${MAGICK_BIN:-convert}"
 
@@ -15,8 +16,13 @@ if ! command -v "${MAGICK_BIN}" >/dev/null 2>&1; then
 fi
 
 if [[ ! -f "${INPUT_PHOTO}" ]]; then
-  echo "error: missing photo: ${INPUT_PHOTO}" >&2
-  exit 1
+  fallback_photo="${ROOT_DIR}/images/bio_photo_bw.jpg"
+  if [[ -f "${fallback_photo}" ]]; then
+    INPUT_PHOTO="${fallback_photo}"
+  else
+    echo "error: missing photo: ${INPUT_PHOTO}" >&2
+    exit 1
+  fi
 fi
 
 if [[ ! -f "${INPUT_LOGO}" ]]; then
@@ -88,6 +94,15 @@ footer_right_margin="${FOOTER_RIGHT_MARGIN:-${text_right_margin}}"
   -font DejaVu-Sans -pointsize "${sub1_pt}" -fill '#d7dde8' -gravity northeast -annotate "+${text_right_margin}+${sub1_y}" "${subtitle_line1}" \
   -font DejaVu-Sans -pointsize "${sub2_pt}" -fill '#c1c9d6' -gravity northeast -annotate "+${text_right_margin}+${sub2_y}" "${subtitle_line2}" \
   -font DejaVu-Sans -pointsize "${footer_pt}" -fill '#aeb8c7' -gravity southeast -annotate "+${footer_right_margin}+${footer_y}" "${footer_text}" \
-  -strip "${OUTPUT_OG_IMAGE}"
+  -strip "${tmpdir}/og-base.png"
 
-echo "wrote ${OUTPUT_OG_IMAGE}"
+"${MAGICK_BIN}" "${tmpdir}/og-base.png" -strip -interlace Plane -sampling-factor 4:2:0 -quality "${OG_JPG_QUALITY:-82}" "${OUTPUT_OG_IMAGE_JPG}"
+
+if [[ "${OG_GENERATE_PNG:-0}" == "1" ]]; then
+  cp "${tmpdir}/og-base.png" "${OUTPUT_OG_IMAGE_PNG}"
+fi
+
+echo "wrote ${OUTPUT_OG_IMAGE_JPG}"
+if [[ "${OG_GENERATE_PNG:-0}" == "1" ]]; then
+  echo "wrote ${OUTPUT_OG_IMAGE_PNG}"
+fi

@@ -34,11 +34,13 @@
 @import "archive";
 @import "sidebar";
 
-@import "vendor/font-awesome/fontawesome";
-@import "vendor/font-awesome/solid";
-@import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
+
+.icon-fw {
+  width: 1.28571429em;
+  text-align: center;
+}
 
 .text-justify {
   p {

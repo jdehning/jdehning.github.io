@@ -62,7 +62,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : "og-image.png" # Open Graph/Twitter default site image in /images/
+og_image                 : "og-image.jpg" # Open Graph/Twitter default site image in /images/
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -73,7 +73,7 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "google-universal" # false (default), "google", "google-universal", "custom"
+  provider               : false # false (default), "google", "google-universal", "custom"
   google:
     tracking_id          :
 
@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Dr. Jonas Dehning"
-  avatar           : "bio_photo_bw.jpg"
+  avatar           : "bio_photo_bw_320.jpg"
   bio              : "Neuroscience, COVID-19 research, Bayesian inference"
   location         : "Göttingen, Germany"
   employer         :
