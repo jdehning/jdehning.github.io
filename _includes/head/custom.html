@@ -6,6 +6,18 @@
 <link rel="icon" href="{{ base_path }}/images/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="{{ base_path }}/images/favicon.png" type="image/png">
 
+{% assign prefetch_urls = "" | split: "" %}
+{% assign prefetch_urls = prefetch_urls | push: "/" %}
+{% for nav_item in site.data.navigation.main %}
+  {% assign prefetch_urls = prefetch_urls | push: nav_item.url %}
+{% endfor %}
+{% assign prefetch_urls = prefetch_urls | uniq %}
+{% for href in prefetch_urls %}
+  {% if page.url != href %}
+<link rel="prefetch" href="{{ base_path }}{{ href }}" as="document">
+  {% endif %}
+{% endfor %}
+
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
