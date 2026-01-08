@@ -2,6 +2,7 @@
 title: "Open Source"
 permalink: /open-source/
 author_profile: true
+math: false
 ---
 
 <div class="text-justify" markdown="1">
