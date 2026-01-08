@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch: {}
 
 permissions:
   contents: read
@@ -21,5 +22,12 @@ jobs:
             echo "Missing secrets: set BUNNY_API_KEY and BUNNY_PULLZONE_ID in GitHub repo settings."
             exit 1
           fi
-          curl -fsS -X POST "https://api.bunny.net/pullzone/${BUNNY_PULLZONE_ID}/purgeCache" \
-            -H "AccessKey: ${BUNNY_API_KEY}"
+          status="$(
+            curl -sS -o /dev/null -w "%{http_code}" -X POST "https://api.bunny.net/pullzone/${BUNNY_PULLZONE_ID}/purgeCache" \
+              -H "AccessKey: ${BUNNY_API_KEY}"
+          )"
+          if [ "${status}" != "200" ] && [ "${status}" != "204" ]; then
+            echo "Purge failed (HTTP ${status})"
+            exit 1
+          fi
+          echo "Purge ok (HTTP ${status})"
