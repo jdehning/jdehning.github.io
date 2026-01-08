@@ -1,7 +1,7 @@
 SHELL := bash
 .DEFAULT_GOAL := help
 
-.PHONY: help install bundle-config bundle-install serve build clean doctor og-image
+.PHONY: help install bundle-config bundle-install serve build clean doctor og-image purge-bunny
 
 help: ## Show available targets
 	@awk 'BEGIN {FS = ":.*##"} /^[a-zA-Z0-9_.-]+:.*##/ {printf "\033[36m%-16s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
@@ -22,6 +22,12 @@ build: ## Build the site into ./_site (GitHub Pages stack)
 
 og-image: ## Generate Open Graph banner image (requires ImageMagick)
 	@bash scripts/generate-og-image.sh
+
+purge-bunny: ## Purge Bunny cache (requires BUNNY_PULLZONE_ID and BUNNY_API_KEY)
+	@test -n "$$BUNNY_PULLZONE_ID" || (echo "Missing env var: BUNNY_PULLZONE_ID" && exit 1)
+	@test -n "$$BUNNY_API_KEY" || (echo "Missing env var: BUNNY_API_KEY" && exit 1)
+	@curl -fsS -X POST "https://api.bunny.net/pullzone/$$BUNNY_PULLZONE_ID/purgeCache" \
+	  -H "AccessKey: $$BUNNY_API_KEY"
 
 doctor: ## Run Jekyll diagnostics
 	@bundle exec jekyll doctor

@@ -1,0 +1,25 @@
+name: Purge Bunny Cache
+
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: read
+
+jobs:
+  purge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Purge Bunny Pull Zone cache
+        env:
+          BUNNY_API_KEY: ${{ secrets.BUNNY_API_KEY }}
+          BUNNY_PULLZONE_ID: ${{ secrets.BUNNY_PULLZONE_ID }}
+        run: |
+          if [ -z "${BUNNY_API_KEY}" ] || [ -z "${BUNNY_PULLZONE_ID}" ]; then
+            echo "Missing secrets: set BUNNY_API_KEY and BUNNY_PULLZONE_ID in GitHub repo settings."
+            exit 1
+          fi
+          curl -fsS -X POST "https://api.bunny.net/pullzone/${BUNNY_PULLZONE_ID}/purgeCache" \
+            -H "AccessKey: ${BUNNY_API_KEY}"
