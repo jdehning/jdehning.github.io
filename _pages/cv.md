@@ -4,6 +4,7 @@ title: "CV"
 permalink: /cv/
 author_profile: true
 math: false
+description: "Short CV of Dr. Jonas Dehning."
 ---
 
 {% include base_path %}

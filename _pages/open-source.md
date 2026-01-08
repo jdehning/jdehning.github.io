@@ -3,6 +3,7 @@ title: "Open Source"
 permalink: /open-source/
 author_profile: true
 math: false
+description: "Selected open-source projects I worked on or contributed to."
 ---
 
 <div class="text-justify" markdown="1">
