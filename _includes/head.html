@@ -16,6 +16,10 @@
 </script>
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
+{% assign asset_version = site.github.build_revision %}
+{% if asset_version == nil or asset_version == "" %}
+  {% assign asset_version = site.time | date: "%s" %}
+{% endif %}
+<link rel="stylesheet" href="{{ base_path }}/assets/css/main.css?v={{ asset_version }}">
 
 <meta http-equiv="cleartype" content="on">
