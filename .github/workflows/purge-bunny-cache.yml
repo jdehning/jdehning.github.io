@@ -1,9 +1,7 @@
 name: Purge Bunny Cache
 
 on:
-  push:
-    branches:
-      - master
+  page_build:
   workflow_dispatch: {}
 
 permissions:
