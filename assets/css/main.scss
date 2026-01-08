@@ -42,6 +42,53 @@
   text-align: center;
 }
 
+/* Drop JS-dependent navigation behavior */
+.greedy-nav {
+  button {
+    display: none;
+  }
+
+  .visible-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1rem;
+
+    li {
+      display: block;
+    }
+
+    a {
+      margin: 0;
+    }
+  }
+
+  .hidden-links {
+    display: none !important;
+  }
+}
+
+/* Always show author links (no JS toggle) */
+.author__urls-wrapper {
+  button {
+    display: none !important;
+  }
+}
+
+.author__urls {
+  display: block !important;
+  position: relative !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+
+  &:before,
+  &:after {
+    display: none !important;
+  }
+}
+
 .text-justify {
   p {
     text-align: justify;
