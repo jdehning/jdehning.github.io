@@ -117,8 +117,10 @@
   }
 }
 .sidebar .author__name {
-  font-family: $sans-serif;
+  font-family: $title-serif;
+  font-optical-sizing: auto;
   font-size: $type-size-5;
+  font-weight: 540;
 }
 
 .author__bio {
@@ -159,6 +161,14 @@
 }
 
 .author__urls {
+  .icon {
+    color: mix(#fff, $gray, 5%);
+  }
+
+  .icon--accent {
+    color: $accent-text-color;
+  }
+
   display: none;
   position: absolute;
   right: 0;

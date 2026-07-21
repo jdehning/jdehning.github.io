@@ -12,7 +12,7 @@ Usage: {% include icon.html name="github" %}
   <path fill="currentColor" d="M192 0C86 0 0 86 0 192c0 77.4 27 95.2 172.3 309.7 9.5 14 29.9 14 39.4 0C357 287.2 384 269.4 384 192 384 86 298 0 192 0zm0 272a80 80 0 1 1 0-160 80 80 0 0 1 0 160z"/>
 </svg>
 {% when "email" %}
-<svg class="icon icon-fw" aria-hidden="true" focusable="false" viewBox="0 0 512 512" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
+<svg class="icon icon-fw icon--accent" aria-hidden="true" focusable="false" viewBox="0 0 512 512" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
   <path fill="currentColor" d="M64 112c-17.7 0-32 14.3-32 32v16l224 140 224-140v-16c0-17.7-14.3-32-32-32H64zm416 112.2L271.5 354.9c-9.7 6.1-22.3 6.1-32 0L32 224.2V368c0 17.7 14.3 32 32 32h416c17.7 0 32-14.3 32-32V224.2z"/>
 </svg>
 {% when "github" %}
@@ -20,7 +20,7 @@ Usage: {% include icon.html name="github" %}
   <path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM248 8C111 8 0 119 0 256c0 110.3 71.9 204 171.5 237.2 12.5 2.3 17.1-5.4 17.1-12.1 0-6-.2-21.7-.3-42.7-69.7 15.1-84.4-33.6-84.4-33.6-11.4-28.8-27.8-36.5-27.8-36.5-22.7-15.5 1.7-15.2 1.7-15.2 25.1 1.8 38.3 25.8 38.3 25.8 22.3 38.3 58.5 27.2 72.8 20.8 2.3-16.1 8.7-27.2 15.9-33.4-55.7-6.3-114.2-27.9-114.2-124.1 0-27.4 9.8-49.9 25.8-67.5-2.6-6.3-11.2-31.8 2.4-66.3 0 0 21.1-6.8 69.1 25.8 20.1-5.6 41.5-8.4 62.8-8.5 21.3.1 42.7 2.9 62.8 8.5 48-32.6 69.1-25.8 69.1-25.8 13.6 34.5 5 60 2.4 66.3 16 17.6 25.8 40.1 25.8 67.5 0 96.5-58.6 117.8-114.5 124.1 8.9 7.7 16.8 22.9 16.8 46.2 0 33.4-.3 60.3-.3 68.5 0 6.7 4.5 14.5 17.2 12.1C424.1 460 496 366.3 496 256 496 119 385 8 248 8z"/>
 </svg>
 {% when "scholar" %}
-<svg class="icon icon-fw" aria-hidden="true" focusable="false" viewBox="0 0 640 512" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
+<svg class="icon icon-fw icon--accent" aria-hidden="true" focusable="false" viewBox="0 0 640 512" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
   <path fill="currentColor" d="M320 32L0 160l320 128 266.7-106.7V352c0 17.7 14.3 32 32 32s32-14.3 32-32V160L320 32zM128 256v100.2c0 45.4 83.6 82.3 192 82.3s192-36.9 192-82.3V256l-192 76.8L128 256z"/>
 </svg>
 {% when "pubmed" %}
@@ -43,4 +43,3 @@ Usage: {% include icon.html name="github" %}
 {% else %}
 {% comment %}No icon.{% endcomment %}
 {% endcase %}
-

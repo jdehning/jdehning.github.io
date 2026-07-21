@@ -11,7 +11,8 @@
     @include container;
     @include clearfix;
     padding: 1em 1em 1em;
-    font-family: $sans-serif-narrow;
+    font-family: $title-serif;
+    font-optical-sizing: auto;
 
     @include breakpoint($x-large) {
       max-width: $large;
@@ -39,11 +40,22 @@
 
 .masthead__menu-item {
   display: block;
+  font-size: 17px;
+  font-weight: 540;
   list-style-type: none;
   white-space: nowrap;
 
+  a {
+    border-bottom: 2px solid transparent;
+  }
+
+  &.is-current a {
+    color: $accent-text-color;
+    border-bottom-color: $accent-color;
+  }
+
   &--lg {
     padding-right: 2em;
-    font-weight: 700;
+    font-weight: 540;
   }
 }

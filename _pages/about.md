@@ -1,13 +1,15 @@
 ---
 permalink: /
-title: "Personal homepage"
-excerpt: "Personal homepage and research overview."
+title: "Inferring Complex Dynamics"
+excerpt: "Bayesian inference, mechanistic modeling, and computational methods for neuroscience and disease dynamics."
 author_profile: true
 math: false
 redirect_from:
   - /about/
   - /about.html
 ---
+
+<p class="page__lead">Bayesian inference, mechanistic modeling, and computational methods for neuroscience and disease dynamics.</p>
 
 <div class="text-justify" markdown="1">
 
